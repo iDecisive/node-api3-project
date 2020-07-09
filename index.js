@@ -3,6 +3,8 @@ const express = require('express');
 
 const postRouter = require('./posts/postRouter');
 
+const userRouter = require('./users/userRouter');
+
 const server = express();
 
 server.use(express.json());
@@ -16,13 +18,9 @@ let logger = (req, res, next) => {
 	next();
 };
 
-let validateUserId = (req, res, next) => {
-	next();
-};
-
 server.use(logger);
 
-server.use('/api/posts', postRouter);
+server.use('/api/users', userRouter);
 
 //Starts server
 

@@ -8,7 +8,6 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
 	// do your magic!
-	res.send('ok');
 });
 
 router.get('/:id', (req, res) => {
